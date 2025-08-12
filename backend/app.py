@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": ["https://avi-47.github.io", "http://localhost:5000"]}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 MODEL = None 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -63,7 +63,7 @@ def static_files(filename):
 
 @app.route('/health', methods=['GET'])
 def health_check():
-    """Health check endpoint"""
+    print("Health endpoint called")  # Debug
     return jsonify({
         'status': 'healthy',
         'model_loaded': MODEL is not None,
