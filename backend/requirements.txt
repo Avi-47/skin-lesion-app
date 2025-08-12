@@ -1,5 +1,5 @@
 flask
-flask-cors
+flask-cors>=4.0.0
 gunicorn
 torch
 torchvision
