@@ -19,7 +19,6 @@ CORS(app, resources={r"/*": {"origins": [
     "http://127.0.0.1:5000"
 ]}})
 
-
 MODEL = None 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 LESION_INFO = get_lesion_info()
