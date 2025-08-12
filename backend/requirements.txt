@@ -3,4 +3,4 @@ flask-cors>=4.0.0
 gunicorn
 torch
 torchvision
-Pillow
+pillow
