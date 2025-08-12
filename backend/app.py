@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
+from flask_cors import cross_origin
+
 import torch
 import torchvision.transforms as transforms
 from PIL import Image
@@ -66,8 +68,12 @@ def static_files(filename):
     return send_from_directory('../frontend/static', filename)
 
 @app.route('/health', methods=['GET'])
+@cross_origin(origins=[
+    "https://avi-47.github.io",
+    "http://localhost:5000",
+    "http://127.0.0.1:5000"
+])
 def health_check():
-    print("Health endpoint called")  # Debug
     return jsonify({
         'status': 'healthy',
         'model_loaded': MODEL is not None,
@@ -75,6 +81,11 @@ def health_check():
     })
 
 @app.route('/predict', methods=['POST'])
+@cross_origin(origins=[
+    "https://avi-47.github.io",
+    "http://localhost:5000",
+    "http://127.0.0.1:5000"
+])
 def predict():
     """Main prediction endpoint"""
     try:
