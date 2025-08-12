@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": ["https://avi-47.github.io", "http://localhost:5000"]}})
 
 MODEL = None 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
