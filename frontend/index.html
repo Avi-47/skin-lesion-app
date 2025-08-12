@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skin Lesion Classifier</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 AI Skin Lesion Classifier</h1>
+            <p class="subtitle">Advanced machine learning for dermatological analysis</p>
+        </header>
+        
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📷</div>
+                <div class="upload-text">Click here or drag & drop an image</div>
+                <div class="upload-subtext">Supports JPG, PNG formats • Max 10MB</div>
+                <input type="file" id="imageInput" accept="image/*">
+            </div>
+            
+            <div class="image-container" id="imageContainer">
+                <img id="imagePreview" alt="Preview">
+                <button id="analyzeBtn" class="analyze-btn">🔍 Analyze Lesion</button>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <span>Analyzing with AI model...</span>
+        </div>
+        
+        <div class="results" id="results"></div>
+        
+        <div class="info-section">
+            <h3>ℹ️ About This Tool</h3>
+            <p>This AI system classifies skin lesions into 7 categories using deep learning. 
+               It's trained on the ISIC 2018 dataset and uses a MobileNet-based architecture.</p>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>⚠️ Medical Disclaimer:</strong> This tool is for educational and research purposes only. 
+            It should not be used as a substitute for professional medical diagnosis. 
+            Always consult with qualified healthcare professionals for medical concerns.
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+graph TD
+    A[User uploads image] --> B[Frontend validates file]
+    B --> C[Image preview shown]
+    C --> D[User clicks Analyze]
+    D --> E[Frontend sends image to backend API]
+    E --> F[Backend loads PyTorch model]
+    F --> G[Backend preprocesses image]
+    G --> H[Model makes prediction]
+    H --> I[Backend returns probabilities]
+    I --> J[Frontend displays results]
+    J --> K[Show top 3 predictions with confidence]
