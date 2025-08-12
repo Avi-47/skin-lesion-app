@@ -120,6 +120,7 @@ def predict():
     except Exception as e:
         logger.error(f"Prediction error: {e}")
         return jsonify({'error': f'Prediction failed: {str(e)}'}), 500
+
 import os
 
 if __name__ == '__main__':
@@ -127,5 +128,5 @@ if __name__ == '__main__':
         logger.error("Failed to initialize model. Exiting.")
         exit(1)
     
-    port = int(os.environ.get("PORT", 5000))  # Use Railway's assigned port
+    port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
