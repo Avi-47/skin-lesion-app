@@ -8,6 +8,7 @@ const loading = document.getElementById('loading');
 const results = document.getElementById('results');
 
 const API_BASE_URL = 'https://skin-lesion-app-production.up.railway.app';
+
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
 uploadArea.addEventListener('click', () => imageInput.click());
