@@ -1,9 +1,8 @@
 # Skin Lesion Classifier Web Application
 
 WebApp demo in LinkedIn post-
-```
-https://www.linkedin.com/feed/update/urn:li:activity:7362558921074425856/
-```
+👉 https://www.linkedin.com/feed/update/urn:li:activity:7362558921074425856/
+
 
 ## Setup Instructions
 
