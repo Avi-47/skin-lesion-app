@@ -7,7 +7,7 @@
 mkdir skin-lesion-app
 cd skin-lesion-app
 mkdir backend frontend frontend/static backend/models
-
+```
 Download the ita dataset (metadata) from 
 ```
 https://github.com/tkalbl/RevisitingSkinToneFairness/blob/main/data/ISIC2018/ISIC2018_Task3_Training_Input/metadata.csv
