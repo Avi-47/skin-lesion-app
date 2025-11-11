@@ -1,0 +1,12 @@
+skin-lesion-app/
+├── backend/
+│   ├── app.py                 # Flask API server
+│   ├── model_loader.py        # Model loading utilities
+│   ├── requirements.txt       # Python dependencies
+│   └── models/
+│       └── your_model.pth     # Your trained model
+├── |── index.html            # Main web interface
+│   ├── static/
+│       ├── style.css         # CSS styles
+│       └── script.js         # JavaScript logic
+└── README.md

@@ -7,8 +7,8 @@ const analyzeBtn = document.getElementById('analyzeBtn');
 const loading = document.getElementById('loading');
 const results = document.getElementById('results');
 
-const API_BASE_URL = 'https://skin-lesion-app-production.up.railway.app';
-
+// ✅ Hugging Face hosted API (backend and frontend are same domain)
+const API_BASE_URL = '';
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
 uploadArea.addEventListener('click', () => imageInput.click());
@@ -30,7 +30,7 @@ async function initApp() {
         }
     } catch (error) {
         console.warn('Could not connect to backend:', error);
-        showError('Could not connect to backend server. Please ensure it\'s running on port 5000.');
+        showError('Could not connect to backend server. Please ensure it\'s running.');
     }
 }
 

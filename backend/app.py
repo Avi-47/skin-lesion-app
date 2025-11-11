@@ -1,7 +1,5 @@
 from flask import Flask, request, jsonify, send_from_directory
-from flask_cors import CORS
-from flask_cors import cross_origin
-
+from flask_cors import CORS, cross_origin
 import torch
 import torchvision.transforms as transforms
 from PIL import Image
@@ -136,13 +134,11 @@ def predict():
         logger.error(f"Prediction error: {e}")
         return jsonify({'error': f'Prediction failed: {str(e)}'}), 500
 
-import os
 
 if __name__ == '__main__':
     if not initialize_model():
         logger.error("Failed to initialize model. Exiting.")
         exit(1)
-
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
-
+    
+    port = int(os.environ.get("PORT", 7860))  # Hugging Face expects 7860
+    app.run(host='0.0.0.0', port=port, debug=False)
